@@ -4,7 +4,7 @@ const BaseNodeWrapper = memo(({ label, children, style = {} }) => {
   return (
     <div
       style={{
-        minWidth: 200,
+        width: 200,
         height: "auto",
         padding: 8,
         ...style,
