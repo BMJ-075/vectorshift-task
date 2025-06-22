@@ -22,9 +22,21 @@ export const VariableNode = ({ id, data }) => {
   };
 
   return (
-    <BaseNodeWrapper label={`Variable: ${name}`}>
-      <InputField label="Value" value={value} onChange={handleValueChange} />
-      <Handle type="source" position={Position.Right} id={`${id}-value`} />
-    </BaseNodeWrapper>
+    <BaseNodeWrapper
+    label={`Variable: ${name}`}
+    style={{
+      background: "linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%)",
+      boxShadow: "0 8px 32px rgba(102, 126, 234, 0.3)",
+      borderRadius: "8px",
+      color: "#333333",
+      fontWeight: 500,
+      backdropFilter: "blur(10px)",
+      transition: "all 0.2s ease"
+    }}
+  >
+    <InputField label="Value" value={value} onChange={handleValueChange} />
+    <Handle type="source" position={Position.Right} id={`${id}-value`} />
+  </BaseNodeWrapper>
+  
   );
 };

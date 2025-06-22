@@ -1,6 +1,6 @@
 // draggableNode.js
 
-export const DraggableNode = ({ type, label }) => {
+export const DraggableNode = ({ type, label, icon: Icon }) => {
     const onDragStart = (event, nodeType) => {
       const appData = { nodeType }
       event.target.style.cursor = 'grabbing';
@@ -22,11 +22,13 @@ export const DraggableNode = ({ type, label }) => {
           borderRadius: '8px',
           backgroundColor: '#1C2536',
           justifyContent: 'center', 
-          flexDirection: 'column'
+          flexDirection: 'column',
+          gap: '5px'
         }} 
         draggable
       >
-          <span style={{ color: '#fff' }}>{label}</span>
+          {Icon && <Icon style={{ color: '#fff', fontSize: '20px' }} />}
+          <span style={{ color: '#fff', fontSize: '12px' }}>{label}</span>
       </div>
     );
   };

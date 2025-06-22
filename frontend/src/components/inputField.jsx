@@ -1,11 +1,11 @@
 export const InputField = ({ label, value, onChange }) => (
   <label style={{ display: "block", marginBottom: 4 }}>
     {label}:
-    <input
+    <textarea
       type="text"
       value={value}
       onChange={onChange}
-      style={{ marginLeft: 4 }}
+      style={{ marginLeft: 4 }} className="custom-text"
     />
   </label>
 );

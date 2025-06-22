@@ -11,3 +11,161 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-text {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #ffffff;
+  color: #333333;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.custom-text:hover {
+  border-color: #c1c7cd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-text:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  background-color: #ffffff;
+}
+
+.custom-text::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.custom-text:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+  border-color: #e9ecef;
+}
+
+.custom-text:invalid {
+  border-color: #dc3545;
+}
+
+.custom-text:invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+/* Common Node Styling */
+.react-flow__node {
+  border-radius: 12px !important;
+  padding: 16px !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  min-height: 120px;
+  width: auto !important;
+  min-width: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.react-flow__node:hover {
+  transform: translateY(-2px);
+}
+
+.react-flow__node > div:first-child {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  margin-bottom: 12px !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+.react-flow__node label {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  margin-bottom: 6px !important;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.react-flow__node .custom-text,
+.react-flow__node select {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 8px !important;
+  color: #333333 !important;
+  font-weight: 500 !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.react-flow__node .custom-text:hover,
+.react-flow__node select:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  outline: none;
+}
+
+.react-flow__node .custom-text:focus,
+.react-flow__node select:focus {
+  background: rgba(255, 255, 255, 1) !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  outline: none;
+}
+
+.react-flow__node select {
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+  cursor: pointer;
+}
+
+/* Unified Node Styling */
+.react-flow__node-customInput,
+.react-flow__node-llm,
+.react-flow__node-customOutput,
+.react-flow__node-text,
+.react-flow__node-variable {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%) !important;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3) !important;
+}
+
+.react-flow__node-customInput:hover,
+.react-flow__node-llm:hover,
+.react-flow__node-customOutput:hover,
+.react-flow__node-text:hover,
+.react-flow__node-variable:hover {
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Themed Submit Button */
+.submit-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}

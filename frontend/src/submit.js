@@ -44,7 +44,7 @@ export const SubmitButton = () => {
         justifyContent: "center",
       }}
     >
-      <button type="button" onClick={handleSubmit}>
+      <button type="button" onClick={handleSubmit} className="submit-button">
         Submit
       </button>
     </div>
