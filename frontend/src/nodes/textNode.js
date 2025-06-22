@@ -1,35 +1,19 @@
-// textNode.js
-
-import { useState } from 'react';
-import { Handle, Position } from 'reactflow';
+import { useState } from "react";
+import { Handle, Position } from "reactflow";
+import BaseNodeWrapper from "../components/baseNodesWrapper";
+import { InputField } from "../components/inputField";
 
 export const TextNode = ({ id, data }) => {
-  const [currText, setCurrText] = useState(data?.text || '{{input}}');
-
-  const handleTextChange = (e) => {
-    setCurrText(e.target.value);
-  };
+  const [currText, setCurrText] = useState(data?.text || "{{input}}");
 
   return (
-    <div style={{width: 200, height: 80, border: '1px solid black'}}>
-      <div>
-        <span>Text</span>
-      </div>
-      <div>
-        <label>
-          Text:
-          <input 
-            type="text" 
-            value={currText} 
-            onChange={handleTextChange} 
-          />
-        </label>
-      </div>
-      <Handle
-        type="source"
-        position={Position.Right}
-        id={`${id}-output`}
+    <BaseNodeWrapper label="Text">
+      <InputField
+        label="Text"
+        value={currText}
+        onChange={(e) => setCurrText(e.target.value)}
       />
-    </div>
+      <Handle type="source" position={Position.Right} id={`${id}-output`} />
+    </BaseNodeWrapper>
   );
-}
+};
