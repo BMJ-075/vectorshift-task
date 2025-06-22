@@ -2,7 +2,7 @@
 // Displays the drag-and-drop UI
 // --------------------------------------------------
 
-import { useState, useRef, useCallback } from "react";
+import { useRef, useCallback } from "react";
 import ReactFlow, { Controls, Background, MiniMap } from "reactflow";
 import { useStore } from "./store";
 import { shallow } from "zustand/shallow";
@@ -11,6 +11,7 @@ import { LLMNode } from "./nodes/llmNode";
 import { OutputNode } from "./nodes/outputNode";
 import { TextNode } from "./nodes/textNode";
 import { VariableNode } from "./nodes/variableNode";
+import { NotesNode } from "./nodes/notes";
 
 import "reactflow/dist/style.css";
 
@@ -22,6 +23,7 @@ const nodeTypes = {
   customOutput: OutputNode,
   text: TextNode,
   customVariable: VariableNode,
+  notes: NotesNode,
 };
 
 const selector = (state) => ({
