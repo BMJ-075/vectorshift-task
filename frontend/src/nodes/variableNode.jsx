@@ -31,7 +31,8 @@ export const VariableNode = ({ id, data }) => {
       color: "#333333",
       fontWeight: 500,
       backdropFilter: "blur(10px)",
-      transition: "all 0.2s ease"
+      transition: "all 0.2s ease",
+      padding:"8px"
     }}
   >
     <InputField label="Value" value={value} onChange={handleValueChange} />

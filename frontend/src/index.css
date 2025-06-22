@@ -169,3 +169,26 @@ code {
   transform: translateY(0);
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
+
+/* React Flow Handle Styling */
+.react-flow__handle {
+  width: 12px !important;
+  height: 12px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid #667eea !important;
+  transition: all 0.2s ease !important;
+}
+
+.react-flow__handle:hover {
+  width: 14px !important;
+  height: 14px !important;
+  background: #ffffff !important;
+  border-color: #764ba2 !important;
+  box-shadow: 0 0 10px #764ba2;
+}
+
+.react-flow__handle-connecting {
+  background: #ff4081 !important; /* A vibrant pink for the connecting state */
+  border-color: #ff4081 !important;
+  box-shadow: 0 0 15px #ff4081;
+}

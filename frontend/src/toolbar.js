@@ -6,7 +6,7 @@ import { FaSignInAlt, FaBrain, FaSignOutAlt, FaFileAlt } from 'react-icons/fa';
 export const PipelineToolbar = () => {
 
     return (
-        <div style={{ padding: '10px' }}>
+        <div style={{ padding: '10px' }} className="pipeline-toolbar">
             <div style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                 <DraggableNode type='customInput' label='Input' icon={FaSignInAlt} />
                 <DraggableNode type='llm' label='LLM' icon={FaBrain} />
