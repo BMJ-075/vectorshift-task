@@ -35,7 +35,6 @@ async def parse_pipeline(pipeline: Pipeline):
         adjacency_list[edge.source].append(edge.target)
         in_degree[edge.target] += 1
 
-    # Kahn's algorithm for topological sort
     queue = [node_id for node_id in node_ids if in_degree[node_id] == 0]
     visited = 0
 
